@@ -1,0 +1,29 @@
+﻿@model MovieModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<div>
+    <h4>Editar Pelicula</h4>
+    <div>
+       
+        <form method="post">
+           <div class="row">
+               <div class="col-6">
+                    <label asp-for="Nombre">Nombre</label>
+                   <input type="text" class="form-control" asp-for="Nombre" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+               </div>
+               <div class="col-6">
+                    <label asp-for="Genero">Genero</label>
+                    <input type="text" class="form-control" asp-for="Genero" />
+                    <span asp-validation-for="Genero" class="text-danger"></span>
+               </div>
+           </div>
+           <br />
+           <button type="submit" class="btn btn-success">Guardar</button>
+
+        </form>
+        <a asp-controller="App" asp-action="Index">Ir Atras</a>
+    </div>
+</div>
+
